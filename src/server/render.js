@@ -100,8 +100,7 @@ function renderComponent (node, isRoot, context) {
             if (isDef(registerComponent)) {
               registerComponent(userContext)
             }
-            res.components.forEach(register => register(userContext))
-            write(res.html, next)
+            write(res, next)
           })
         } else {
           renderComponentWithCache(node, isRoot, key, context)
@@ -113,8 +112,7 @@ function renderComponent (node, isRoot, context) {
           if (isDef(registerComponent)) {
             registerComponent(userContext)
           }
-          res.components.forEach(register => register(userContext))
-          write(res.html, next)
+          write(res, next)
         } else {
           renderComponentWithCache(node, isRoot, key, context)
         }

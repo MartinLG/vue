@@ -98,7 +98,7 @@ export class RenderContext {
           html: buffer[bufferIndex],
           components: componentBuffer[bufferIndex]
         }
-        this.cache.set(key, result)
+        this.cache.set(key, result.html)
         if (bufferIndex === 0) {
           // this is a top-level cached component,
           // exit caching mode.
